@@ -43,7 +43,10 @@ class EmpresaController extends Zend_Controller_Action {
             $cidade = $this->getRequest()->getParam("cidade", "");
             $empresa = new Application_Model_Empresa();
             $lista = $empresa->listar($cidade);
-            $this->view->listaEmpresa = $lista;
+            if(count($lista) != 0)
+                $this->view->listaEmpresa = $lista;
+            else
+                $this->view->msg = "Não há empresas cadastradas!";
         }
     }
 
