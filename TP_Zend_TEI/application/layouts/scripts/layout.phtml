@@ -8,10 +8,12 @@
             <ul>
                 <li><a href="<?php echo $this->url(array('controller' => 'Empresa', 
                     'action' => 'index')); ?>">Empresa</a></li>
-                <li><a href="<?php echo $this->url(array('controller' => 'PontoColeta')); ?>">Ponto de coleta</a></li>
+                <li><a href="<?php echo $this->url(array('controller' => 'PontoColeta',
+                    'action' => 'index')); ?>">Ponto de coleta</a></li>
                 <li><a href="<?php echo $this->url(array('controller' => 'Empresa',
                     'action' => 'buscar')) ?>">Buscar empresas</a></li>
-                <li><a href="#">Buscar pontos de coleta</a></li>
+                <li><a href="<?php echo $this->url(array('controller' => 'PontoColeta',
+                    'action' => 'buscar')) ?>">Buscar pontos de coleta</a></li>
             </ul>
         </div>
        <?php echo $this->layout()->content; ?> 

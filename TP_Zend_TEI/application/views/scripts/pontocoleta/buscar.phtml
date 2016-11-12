@@ -1,0 +1,40 @@
+<h3>Lista de Pontos de coleta</h3>
+<form method="POST">
+    <select name="cidade">
+        <option selected></option>
+        <option>Praia Grande</option>
+        <option>Santos</option>
+        <option>São Vicente</option>
+        <option>Mongaguá</option>
+        <option>São Paulo</option>
+    </select> 
+    <input type="submit" value="Procurar"/>
+</form>
+<?php if(count($this->listaPontos)){ ?>
+<table>
+    <table border="1px solid">
+    <tr>
+        <th>Nome</th>
+        <th>Endereço</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>Telefone</th>
+        <th>Tipo de Resíduo coletado</th>
+        <th>Email</th>
+    </tr>
+    <?php foreach ($this->listaPontos as $ponto) {?>
+    <tr>
+        <td><?= $ponto['nm_ponto_coleta'] ?></td>
+        <td><?= $ponto['nm_endereco_ponto_coleta'] ?></td>
+        <td><?= $ponto['nm_bairro_ponto_coleta'] ?></td>
+        <td><?= $ponto['nm_cidade_ponto_coleta']  ?></td>
+        <td><?= $ponto['cd_telefone_ponto_coleta'] ?></td>
+        <td><?= $ponto['nm_tipo_residuo'] ?></td>
+        <td><?= $ponto['nm_email_ponto_coleta'] ?></td>
+    </tr>
+    <?php } ?>
+</table>
+<?php }else{
+            echo $this->msg;
+      } 
+?>

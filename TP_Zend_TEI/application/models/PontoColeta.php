@@ -1,8 +1,8 @@
 <?php
 
-class Application_Model_Empresa extends Zend_Db_Table_Abstract
+class Application_Model_PontoColeta extends Zend_Db_Table_Abstract
 {
-    protected $_name = "empresa";
+    protected $_name = "ponto_coleta";
     
     public function cadastrar($data)
     {
@@ -12,9 +12,8 @@ class Application_Model_Empresa extends Zend_Db_Table_Abstract
     public function listar($cidade)
     {
         $select = $this->select()
-                ->where('nm_cidade = ?', "$cidade")
-                ->order("nm_empresa");
+                ->where('nm_cidade_ponto_coleta = ?', "$cidade")
+                ->order('nm_ponto_coleta');
         return $this->fetchAll($select)->toArray();
     }
 }
-
