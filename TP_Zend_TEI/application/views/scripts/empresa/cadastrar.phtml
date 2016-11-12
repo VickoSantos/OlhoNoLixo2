@@ -1,0 +1,15 @@
+<h3>Lista de empresas</h3>
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Endereço</th>
+        <th>Cidade</th>
+    </tr>
+    <?php foreach ($this->listaEmpresa as $emp) {?>
+    <tr>
+        <td><?= $emp['nm_empresa'] ?></td>
+        <td><?= $emp['nm_endereco'] ?></td>
+        <td><?= $emp['nm_cidade'] ?></td>
+    </tr>
+    <?php } ?>
+</table>

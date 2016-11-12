@@ -1,0 +1,42 @@
+<h3>Cadastre sua empresa</h3>
+<form method="POST">
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td colspan="3"> <input type="text" name="nome"></td>
+        </tr>
+        <tr>
+            <td colspan="4">Endereço:</td>
+        </tr>
+        <tr>
+            <td>Rua:</td>
+            <td><input type="text" name="endereco"></td>
+            <td>Nº:</td>
+            <td><input type="number"/></td>
+        </tr>
+        <tr>
+            <td>Cidade:</td>
+            <td><input type="text" name="cidade"></td>
+        </tr>
+        <tr>
+            <td>Telefone:</td>
+            <td><input type="number" name="telefone"/></td>
+        </tr>
+        <tr>
+            <td>Tipo de empresa:</td>
+            <td colspan="3">
+                <select>
+                    <option>Coletora</option>
+                    <option>Produtora</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="file"/></td>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="submit" value="Cadastrar"/></td>
+        </tr>
+    </table>
+</form>
+<?php echo $this->resp;?>
