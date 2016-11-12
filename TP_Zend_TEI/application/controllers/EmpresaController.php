@@ -37,7 +37,7 @@ class EmpresaController extends Zend_Controller_Action
         }
     }
 
-    public function cadastrarAction()
+    public function buscarAction()
     {
         $empresa = new Application_Model_Empresa();
         $lista = $empresa->listar();

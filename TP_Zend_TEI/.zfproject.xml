@@ -13,7 +13,7 @@
         <controllerFile controllerName="Error"/>
         <controllerFile controllerName="Empresa">
           <actionMethod actionName="index"/>
-          <actionMethod actionName="cadastrar"/>
+          <actionMethod actionName="buscar"/>
         </controllerFile>
         <controllerFile controllerName="PontoColeta">
           <actionMethod actionName="index"/>
@@ -42,7 +42,7 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Empresa">
-            <viewScriptFile forActionName="cadastrar"/>
+            <viewScriptFile forActionName="buscar"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="PontoColeta">
             <viewScriptFile forActionName="index"/>
@@ -86,7 +86,7 @@
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Empresa">
             <testApplicationActionMethod forActionName="index"/>
-            <testApplicationActionMethod forActionName="cadastrar"/>
+            <testApplicationActionMethod forActionName="buscar"/>
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="PontoColeta">
             <testApplicationActionMethod forActionName="index"/>
