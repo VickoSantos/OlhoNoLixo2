@@ -1,15 +1,39 @@
 <h3>Lista de empresas</h3>
-<table>
+<form method="POST">
+    <select name="cidade">
+        <option selected></option>
+        <option>Praia Grande</option>
+        <option>Mongaguá</option>
+        <option>São vicente</option>
+        <option>Santos</option>
+        <option>New York</option>
+        <option>São Paulo</option>
+    </select>
+    <input type="submit" value="Procurar"/>
+</form>
+<?php if(count($this->listaEmpresa)){ ?>
+<table border="1px solid">
     <tr>
         <th>Nome</th>
         <th>Endereço</th>
+        <th>Bairro</th>
         <th>Cidade</th>
+        <th>Telefone</th>
+        <th>Tipo de Empresa</th>
+        <th>Tipo de Resíduo coletado</th>
+        <th>Email</th>
     </tr>
     <?php foreach ($this->listaEmpresa as $emp) {?>
     <tr>
         <td><?= $emp['nm_empresa'] ?></td>
         <td><?= $emp['nm_endereco'] ?></td>
-        <td><?= $emp['nm_cidade'] ?></td>
+        <td><?= $emp['nm_bairro_empresa'] ?></td>
+        <td><?= $emp['nm_cidade']  ?></td>
+        <td><?= $emp['cd_telefone_empresa'] ?></td>
+        <td><?= $emp['nm_tipo_empresa'] ?></td>
+        <td><?= $emp['nm_tipo_residuo'] ?></td>
+        <td><?= $emp['nm_email_empresa'] ?></td>
     </tr>
     <?php } ?>
 </table>
+<?php } ?>
