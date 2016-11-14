@@ -1,58 +1,29 @@
-<h3>Cadastre sua empresa</h3>
-<form method="POST">
+<div align="center">
+    <h3>Cadastre a empresa</h3>
     <table>
         <tr>
-            <td>Nome:</td>
-            <td colspan="3"> <input type="text" name="nome"></td>
-        </tr>
-        <tr>
-            <td colspan="4">Endereço:</td>
-        </tr>
-        <tr>
-            <td>Rua:</td>
-            <td><input type="text" name="endereco"></td>
-            <td>Nº:</td>
-            <td><input type="number"/></td>
-        </tr>
-        <tr>
-            <td>Bairro:</td>
-            <td><input type="text" name="bairro"></td>
-            <td>Cidade:</td>
-            <td><input type="text" name="cidade"></td>
-        </tr>
-        <tr>
-            <td>Telefone:</td>
-            <td><input type="number" name="telefone"/></td>
-        </tr>
-        <tr>
-            <td>Tipo de empresa:</td>
             <td>
-                <select name="tipoEmp">
-                    <option>Coletora</option>
-                    <option>Produtora</option>
-                </select>
+                <?php 
+                    echo $this->form;
+                    echo $this->resp;
+                ?>
             </td>
-            <td>
-                Tipo de resíduo:
-            </td>
-            <td>
-                <select name="tipoRes">
-                    <option>Plástico</option>
-                    <option>Papel</option>
-                    <option>Metal</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Email:</td>
-            <td><input type="email" name="email"/></td>
-        </tr>
-        <tr>
-            <td colspan="4"><input type="file"/></td>
-        </tr>
-        <tr>
-            <td colspan="4"><input type="submit" value="Cadastrar"/></td>
         </tr>
     </table>
-</form>
-<?php echo $this->resp;?>
+</div>
+<style type="text/css">
+    body{
+        background-image: linear-gradient(#C1FFC1, #00CDCD);
+    }
+    input[type=text], select{
+        width: 250px;
+        height: 35px;
+    }
+    input[type=submit]{
+        width: 100px;
+        height: 35px;
+        border-radius: 10px;
+        background-image: linear-gradient(#00FA9A, #20B2AA);
+        color: white;
+    }
+</style>

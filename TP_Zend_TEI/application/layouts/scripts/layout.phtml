@@ -2,20 +2,48 @@
     <head>
         <meta charset="UTF-8"/>
         <title>De Olho No Lixo</title>
+        <link rel="stylesheet" type="text/css" 
+              href="<?php echo $this->baseUrl("/include/style.css"); ?>"/>
     </head>
-    <body>
-        <div>
-            <ul>
-                <li><a href="<?php echo $this->url(array('controller' => 'Empresa', 
-                    'action' => 'index')); ?>">Empresa</a></li>
-                <li><a href="<?php echo $this->url(array('controller' => 'PontoColeta',
-                    'action' => 'index')); ?>">Ponto de coleta</a></li>
-                <li><a href="<?php echo $this->url(array('controller' => 'Empresa',
-                    'action' => 'buscar')) ?>">Buscar empresas</a></li>
-                <li><a href="<?php echo $this->url(array('controller' => 'PontoColeta',
-                    'action' => 'buscar')) ?>">Buscar pontos de coleta</a></li>
-            </ul>
+    <body>       
+        <div id="header">
+            <a href="#"><div id="logo"></div></a>
+            <div class="menu" align="center">
+                <ul>
+                    <li><a href="#">Principal</a></li> || 
+                    <li><a href="<?php echo $this->url(array('controller' => 'Empresa',
+                                'action' => 'buscar'))?>">Empresas</a></li> || 
+                    <li><a href="<?php echo $this->url(array('controller' => 'PontoColeta',
+                                'action' => 'buscar'))?>">Pontos de Coleta</a></li> || 
+                    <li><a href="<?php echo $this->url(array('controller' => 'Empresa',
+                                'action' => 'index'));?>">Cadastro das Empresas</a></li> || 
+                    <li><a href="<?php echo $this->url(array('controller' => 'PontoColeta',
+                                'action' => 'index'));?>">Cadastro dos Pontos de Coleta</a></li> ||
+                    <li><a href="#">Contato</a></li> || 
+                    <li><a href="#">Informações</a></li> || 
+                    <li><a href="#">Quem Somos</a></li> || 
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
         </div>
-       <?php echo $this->layout()->content; ?> 
+<?php echo $this->layout()->content; ?> 
+        <div id="footer" style="font-size: 17px; height: 30px; padding-bottom: 10px; padding-top: 10px">
+            <p style="color: black" align="center">&#169;2016 All Rights Reserved &#183 Design by Delnv</p>
+        </div>
     </body>
+    <style type="text/css">
+        input[type=text],textarea,select,input[type=password],input[type=email]{
+            /* Border style */
+            border: 1px solid #66cdaa;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            border-radius: 9px;
+            /* Box shadow */
+            -moz-box-shadow: inset 0 3px 0 0 #3cb371;
+            -webkit-box-shadow: inset 0 3px 0 0 #3cb371;
+            box-shadow: inset 0 3px 0 0 #3cb371;
+            padding: 8px
+            //background-color:#E8E8E8;
+ }
+</style>
 </html>

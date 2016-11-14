@@ -1,0 +1,10 @@
+body {
+	font-family:arial;
+	font-size:65px;
+}
+
+.codigo {
+	width:365px;
+	background-color:#fff;
+	padding: 4px 4px;
+}

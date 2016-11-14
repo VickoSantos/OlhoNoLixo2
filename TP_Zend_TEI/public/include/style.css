@@ -1,0 +1,185 @@
+    body {
+	 margin:0;
+	 font-family:helvetica,verdana;
+
+    }
+	#container{
+      margin: auto;
+      text-align:center;
+      background-color:#ffffff;
+  	}
+  	#im1{
+     padding-top:-6px;
+     padding-bottom:0px;
+  	}
+   	#parceiros{
+	  float:left;
+      padding-left:20px;
+	}
+	#cont{
+      padding-right:50px;
+      padding-left:100px;
+      line-height:40px;
+	}
+   .header{
+     background-color:#006400;
+   }
+   .menu{
+     background-color:#006400;
+     height: 50px;
+     padding-top:1px;
+     font-size:17px;
+    }
+    .menu ul li a{
+      text-decoration: none;
+      color:white;
+      color:white;
+      display: inline-block;
+     }
+     .menu ul li {
+      list-style: none;
+      display: inline-block;
+     }
+   .menu a:hover{
+    color:#C0FFC0;
+    transform:rotatey(9deg);
+    transition:1s;
+   }
+   #logo {
+    background:url(../images/lixo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#006400;
+    height:260px;
+   }
+ 	.d {
+      font-size:24px;margin:50px auto;color:black;
+    }
+	.e {
+      margin:50px auto;color:#000080;
+     }
+    .a {
+      font-size:17px;color:#005100;word-spacing:10px;
+     }
+    #nome .y {
+	   color:#C0FFFF;
+       font-weight:bold;
+       text-align: right;
+	}
+    .c{
+      font-size:20px;color:#000080;text-align:center;
+    }
+    .g{
+      font-size:23px;color:#000080;text-align:center;
+    }
+    .f{
+      font-size:20px;color:#000080
+    }
+    #i{
+      padding-left:20px;
+    }
+    .div1{
+       color: #000080;font-size:19px;
+    }
+     textarea { resize: none }
+     #btn{
+      border-radius:10px;
+      font-size:14px;
+      font-weight:bold;
+      background-color: #3cb371;
+      color:white;
+      display: inline-block;
+      cursor: pointer;
+      padding:7px;
+     }
+    #btn:active {
+     box-shadow: 0 8px #C0FFC0;
+     transform: translateY(9px);
+    }
+    #btn:hover{
+     color:#66cdaa;
+     transform:rotatey(4deg);
+     transition:1s;
+    }
+    /* utilizados na pag. de informacoes  */
+   #todas span{
+     display:none;
+     font-size:17px;
+     width: 870px;
+   }
+  .abrirResp{
+    position:relative;
+    top:0;
+    text-decoration: none;
+   }
+  .abrirResp:hover{
+    top:-4px;box-shadow:0 2px 2px #C0FFC0;
+    top:-2px;border-bottom:2px solid #C0FFC0;
+    transition: all .2s ease-in-out;
+   }
+   #info{
+    font-size:20px;
+   }
+   #menu2 ul li:first-child a {
+    border-radius: 5px 5px 0 0;
+}
+
+
+#contenedor{
+  margin: 10px auto;
+  width: 540px;
+  height: 115px;
+}
+.reloj{
+  float: left;
+  font-size: 60px;
+  font-family: Courier,sans-serif;
+  color: #363431;
+}
+.boton{
+  outline: none;
+  border: 1px solid #363431;
+  color: white;
+  width: 128px;
+  height: 30px;
+  text-shadow: 0px -1px 1px black;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: Helvetica;
+  cursor: pointer;
+  background-image: linear-gradient(#3aad02,#2c6f05);
+}
+.boton:active{
+  background-image: linear-gradient(#2c6f05,#3aad02);
+}
+.boton:hover{
+  box-shadow: 0px 0px 14px #3aad02;
+}
+
+#btlogin{
+    border-radius:10px;
+    font-weight:bold;
+    background-color:black;
+    color:white;
+    display: inline-block;
+    cursor: pointer;
+    font-size:13px;
+    padding:5px;
+}
+#btlogin:active {
+   box-shadow: 0 8px #C0FFC0;
+   transform: translateY(13px);
+}
+#btlogin:hover{
+	color: #C0FFC0;
+	transform:rotatey(11deg);
+    transition:2s;
+}
+#link{
+    font-size: 13px;
+	color: black;
+	text-decoration: none;
+}
+#link:hover{
+	color: #C0FFC0;
+}

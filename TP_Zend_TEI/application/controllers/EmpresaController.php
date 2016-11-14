@@ -36,6 +36,8 @@ class EmpresaController extends Zend_Controller_Action {
                 $this->view->resp = "Empresa não cadastrada!";
             }
         }
+        
+        $this->view->form = $this->defineFormulario();
     }
 
     public function buscarAction() {
@@ -48,6 +50,40 @@ class EmpresaController extends Zend_Controller_Action {
             else
                 $this->view->msg = "Não há empresas cadastradas!";
         }
+    }
+    
+    public function defineFormulario(){
+        
+        $nome = new Zend_Form_Element_Text("nome");
+        $nome->setLabel("Nome:");
+        $endereco = new Zend_Form_Element_Text("endereco");
+        $endereco->setLabel("Endereço:");
+        $cidade = new Zend_Form_Element_Text("cidade");
+        $cidade->setLabel("Cidade:");
+        $telefone = new Zend_Form_Element_Text("telefone");
+        $telefone->setLabel("Telefone:");
+        $email = new Zend_Form_Element_Text("email");
+        $email->setLabel("Email:");
+        $tipoEmp = new Zend_Form_Element_Select("tipoEmpresa");
+        $tipoEmp->addMultiOptions(array('Selecionar', 'Produto', 
+            'Coletora', 'Recicladora'));
+        $tipoEmp->setLabel("Tipo de Empresa:");
+        $tipoRes = new Zend_Form_Element_Select("tipoRes");
+        $tipoRes->setLabel("Tipo de Resíduo:");
+        $tipoRes->addMultiOptions(array('Selecionar', 'Papel', 'Plástico', 'Metal', 
+                'Vidro', 'Hospitalar', 'Químico'));
+        $bairro = new Zend_Form_Element_Text("bairro");
+        $bairro->setLabel("Bairro:");
+        $submit = new Zend_Form_Element_Submit("Cadastrar");
+        
+        $form = new Zend_Form();
+        $form->setMethod('post');
+        $form->setAttrib('id', 'cadastroEmpresa');
+        
+        $form->addElements([$nome, $endereco, $bairro, $cidade, $telefone, 
+                $email, $tipoEmp, $tipoRes, $submit]);
+        
+        return $form;
     }
 
 }

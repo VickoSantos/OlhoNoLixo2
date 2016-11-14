@@ -37,6 +37,8 @@ class PontoColetaController extends Zend_Controller_Action
                 $this->view->resp = "Ocorreu um erro. Não foi possível cadastrar!";
             }
         }
+        
+        $this->view->form = $this->definirFormulario();
     }
 
     public function buscarAction()
@@ -53,6 +55,35 @@ class PontoColetaController extends Zend_Controller_Action
                 $this->view->msg = "Nenhum ponto encontrado!";
             }
         }
+    }
+    
+    public function definirFormulario(){
+        $nome = new Zend_Form_Element_Text("nome");
+        $nome->setLabel("Nome:");
+        $endereco = new Zend_Form_Element_Text("endereco");
+        $endereco->setLabel("Endereço:");
+        $cidade = new Zend_Form_Element_Text("cidade");
+        $cidade->setLabel("Cidade:");
+        $telefone = new Zend_Form_Element_Text("telefone");
+        $telefone->setLabel("Telefone:");
+        $email = new Zend_Form_Element_Text("email");
+        $email->setLabel("Email:");
+        $tipoRes = new Zend_Form_Element_Select("tipoRes");
+        $tipoRes->setLabel("Tipo de Resíduo:");
+        $tipoRes->addMultiOptions(array('Selecionar', 'Papel', 'Plástico', 'Metal', 
+                'Vidro', 'Hospitalar', 'Químico'));
+        $bairro = new Zend_Form_Element_Text("bairro");
+        $bairro->setLabel("Bairro:");
+        $submit = new Zend_Form_Element_Submit("Cadastrar");
+        
+        $form = new Zend_Form();
+        $form->setMethod('post');
+        $form->setAttrib('id', 'cadastroEmpresa');
+        
+        $form->addElements([$nome, $endereco, $bairro, $cidade, $telefone, 
+                $email, $tipoRes, $submit]);
+        
+        return $form;
     }
     
 }
